@@ -82,7 +82,7 @@ The retrieved images will be documented in a csv file while the images themselve
                     print(species , ID , 'https://eol.org/pages/{}'.format(ID) , 
                             media['license'],
                             media['eolMediaURL'],
-                            '"{}"'.format(media['description']),
+                            '"{}"'.format(media['description'].replace('\n',' ')),
                             '"{}"'.format(media['rightsHolder'],
                                 filename),sep=';' , file=OUT)
 
