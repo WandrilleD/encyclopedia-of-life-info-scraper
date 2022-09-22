@@ -17,4 +17,13 @@ Download the images
 
 ```
 python grab_image_from_url.py -i homo_sapiens.img_to_download.txt
-``
+```
+
+You can also perform similar operation in a single step for multiple queries.
+
+For instance, the following will download (at most) 5 pictures per species listed in the query file:
+
+```
+mkdir primates_images/ # creating output folder
+python  query_and_download_images_from_eol.py -q primates_10species_list.txt -o primates_images -m 5 
+```
