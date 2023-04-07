@@ -83,7 +83,7 @@ The retrieved images will be documented in a csv file while the images themselve
                             media['license'],
                             media['eolMediaURL'],
                             '"{}"'.format(media['description'].replace('\n',' ')),
-                            '"{}"'.format(media['rightsHolder'],
-                                filename),sep=';' , file=OUT)
+                            '"{}"'.format(media['rightsHolder']),
+                                filename,sep=';' , file=OUT)
 
 

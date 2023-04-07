@@ -64,7 +64,7 @@ def getMediaList(ID , maxImage = 10 ):
 
 	for o in data_pages['taxonConcept'].get('dataObjects',[]):
 		if o['dataType']== 'http://purl.org/dc/dcmitype/StillImage':
-			medias.append( {k:o[k] for k in ['license','eolMediaURL','description','rightsHolder'] } )
+			medias.append( {k:o.get(k,'') for k in ['license','eolMediaURL','description','rightsHolder'] } )
 	return medias
 
 
